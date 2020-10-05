@@ -14,13 +14,11 @@ CONTENTS OF THIS FILE
 INTRODUCTION
 ------------
 
-The "allocation_template"- simple automation test project (Application under the tests).
+Task to build simple tests network with API tests.
 
 LOCATION
 ---------
 
-- SSH: git@github.com:Antonio1980/fx_automation_framework.git
-- HTTPS://github.com/Antonio1980/fx_automation_framework.git
 
 TECHNOLOGIES
 ------------
@@ -52,13 +50,13 @@ TESTS
 * $ pytest -v tests --alluredir=allure_/allure_results
 
 2 Run tests as a package:
-* $ pytest -v tests/processing_tests --alluredir=allure_/allure_results
+* $ pytest -v tests/api_tests --alluredir=allure_/allure_results
 
 3 Run specific test:
-* $ pytest -v tests/processing_tests/actor_can_create_new_allocation_template_test.py  --alluredir=allure_/allure_results
+* $ pytest -v tests/api_tests/get_most_popular_movies_test.py  --alluredir=allure_/allure_results
 
 4 Run per test group (regression group as example):
-* $ pytest -v tests -m regression --alluredir=allure_/allure_results
+* $ pytest -v tests -m api --alluredir=allure_/allure_results
 
 5 Generate temporary allure report:
 * $ allure serve allure_/allure_results
@@ -81,7 +79,7 @@ TESTS
 
 * Test Groups:
 
-1. regression - Short tests that should pass always..
+1. api - Short tests that should pass always..
 
 
 CONFIGURATION
