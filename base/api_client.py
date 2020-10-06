@@ -55,9 +55,9 @@ class ApiClient:
             raise e
 
     @automation_logger(logger)
-    def get_movie_changes(self):
+    def get_movie_changes(self, end_date, start_date):
         uri = self.api_url + "movie/changes"
-        querystring = {"api_key": BaseConfig.TOKEN_V3, "end_date": "", "start_date": "", "page": 1}
+        querystring = {"api_key": BaseConfig.TOKEN_V3, "end_date": end_date, "start_date": start_date, "page": 1}
         try:
             _response = requests.get(url=uri, params=querystring)
             try:

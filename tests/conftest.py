@@ -5,7 +5,7 @@ from base.api_client import ApiClient
 from base.logger import automation_logger, logger
 
 
-@pytest.fixture
+@pytest.fixture(scope="class")
 @automation_logger(logger)
 def r_time_count(request):
     start_time = time.perf_counter()
@@ -22,7 +22,7 @@ def r_time_count(request):
     request.addfinalizer(stop_counter)
 
 
-@pytest.fixture(scope="class")
+@pytest.fixture(scope="session")
 @automation_logger(logger)
 def api_client():
     return ApiClient()
