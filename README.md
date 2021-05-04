@@ -18,6 +18,8 @@ Task to build simple tests network with API tests.
 
 LOCATION
 ---------
+https://github.com/Antonio1980/simple_template_for_testing_api.git
+git@github.com:Antonio1980/simple_template_for_testing_api.git
 
 
 TECHNOLOGIES
